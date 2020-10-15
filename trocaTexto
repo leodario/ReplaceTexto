@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Um texto</li>
+        <li>outro texto</li>
+        <li>exemplo</li>
+        <li>77 ouvintes</li>
+        <li>outro texto</li>        
+        <li>outros exemplos</li>
+    </ul>
+    <script> 
+    /*       
+        let elemento = document.querySelector('li');        
+        let texto = elemento.textContent;
+        console.log(texto)
+        texto = texto.replaceAll('alterar', 'outroTexto')
+        console.log(texto)
+        elemento.innerHTML = texto
+    */
+        const elemento = document.querySelectorAll('li');
+        elemento.forEach(item=>{
+            item.textContent = item.textContent.replace(/outros exemplos/g, 'trocou')
+            item.textContent = item.textContent.replace(/77 ouvintes/g, 'um ouvinte')
+            item.textContent = item.textContent.replace(/Um texto/g, 'somente texto')
+        })
+
+    </script>
+</body>
+</html>
